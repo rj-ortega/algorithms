@@ -2,7 +2,9 @@
   "name": "algorithms",
   "version": "1.0.0",
   "description": "Repo to practice computer science algorithms with tests",
-  "dependencies": {},
+  "dependencies": {
+    "sinon": "^7.5.0"
+  },
   "devDependencies": {
     "mocha": "^6.2.1"
   },
