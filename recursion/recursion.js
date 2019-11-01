@@ -47,11 +47,28 @@ function filter (array, result = [], index = 0) {
 //   return result
 // }
 
-function reverseString (word, index = 0) {
-  if (index === word.length) {
-    return ''
+// function reverseString (word, index = 0) {
+//   if (index === word.length) {
+//     return ''
+//   }
+//   return reverseString(word, index + 1) + word[index]
+// }
+
+function reverseString (string) {
+  if (string === null) {
+    return null
   }
-  return reverseString(word, index + 1) + word[index]
+  if (string.length <= 1) {
+    return string
+  }
+  var first = string[0]
+  var last = string[string.length - 1]
+  var string1 = reverseString(string.substring(1, string.length - 1))
+  return last + string1 + first
+  // ell, first= h, last= o
+  // l , first= e, last= l
+  // return l l e
+  // return o l l e h
 }
 
 module.exports = {
