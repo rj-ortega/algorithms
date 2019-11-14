@@ -15,7 +15,7 @@ describe('recursion', () => {
     const input = ['cat', 'dog', 'bird', 'fish']
     const expected = ['bird', 'fish']
     // const output = recursion.filter(input)
-    const output = filter(input)
+    const output = filter(input, 'i')
     assert.deepEqual(output, expected)
   })
   it('should reverse a word', () => {

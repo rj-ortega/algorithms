@@ -19,10 +19,10 @@ function printItems (array) {
 //   printItems(newArray)
 // }
 
-function filter (array, result = [], index = 0) {
+function filter (array, toFilter, result = [], index = 0) {
   if (index < array.length) {
-    if (array[index].indexOf('i') !== -1) {
-      result.push(array[index])
+    if (array[index].indexOf(toFilter) !== -1) {
+      result.push(array[index], toFilter)
     }
     return filter(array, result, index + 1)
   }
@@ -47,13 +47,6 @@ function filter (array, result = [], index = 0) {
 //   return result
 // }
 
-// function reverseString (word, index = 0) {
-//   if (index === word.length) {
-//     return ''
-//   }
-//   return reverseString(word, index + 1) + word[index]
-// }
-
 function reverseString (string) {
   if (string === null) {
     return null
@@ -70,6 +63,14 @@ function reverseString (string) {
   // return l l e
   // return o l l e h
 }
+
+// other way:
+// function reverseString (word, index = 0) {
+//   if (index === word.length) {
+//     return ''
+//   }
+//   return reverseString(word, index + 1) + word[index]
+// }
 
 module.exports = {
   printItems,
